@@ -27,14 +27,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "gitopsterrastate1"
+    bucket = "visiongit0123"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
 
   required_version = "~> 1.6.3"
 }
-##
-##
-###
 ##
