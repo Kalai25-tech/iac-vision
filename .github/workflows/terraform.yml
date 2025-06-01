@@ -1,4 +1,4 @@
-name: "Terraform Destroy Vision IAC"
+name: "Terraform Destroy Vision IAC (Main)"
 
 on:
   workflow_dispatch: # Run manually
