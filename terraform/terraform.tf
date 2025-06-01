@@ -29,7 +29,7 @@ terraform {
   backend "s3" {
     bucket = "visiongit0123"
     key    = "terraform.tfstate"
-    region = "us-west-1"
+    region = "us-east-1"
   }
 
   #required_version = "~> 1.6.3"
