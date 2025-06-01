@@ -1,4 +1,4 @@
-name: "vision IAC"
+name: "Vision IAC"
 on:
   push:
     branches:
