@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - stage
+      - hotfix
     paths:  
       - terraform/**
   pull_request:
@@ -19,7 +20,7 @@ env:
  # S3 bucket for the Terraform state
  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
  AWS_REGION: us-east-1
- EKS_CLUSTER: vision-eks
+ EKS_CLUSTER: vision-eks1
 
 jobs:
    terraform:
@@ -63,10 +64,10 @@ jobs:
        - name: Terraform Apply
          id: apple
          if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-         #run: terraform apply -auto-approve -input=false -parallelism=1 planfile
-         run: |
-          terraform destroy -auto-approve -input=false -parallelism=1
-          exit 0
+         run: terraform apply -auto-approve -input=false -parallelism=1 planfile
+         #run: |
+          #terraform destroy -auto-approve -input=false -parallelism=1
+          #exit 0
          
        - name: Configure AWS credentials
          uses: aws-actions/configure-aws-credentials@v1
