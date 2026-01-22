@@ -10,3 +10,4 @@ variable "clusterName" {
   default     = "vision-eks1"
 }
 
+#main
