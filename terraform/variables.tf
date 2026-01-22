@@ -9,10 +9,4 @@ variable "clusterName" {
   type        = string
   default     = "vision-eks1"
 }
-<<<<<<< HEAD
 
-######
-=======
-##
-############
->>>>>>> main
